@@ -31,3 +31,13 @@ ul {
     height: 100vh;
     padding-top: 5%;
 }
+
+.item-container {
+    display: flex;
+    width: 80%;
+}
+
+.item-container div {
+    width: 25%;
+    border: 1px solid black;
+}
