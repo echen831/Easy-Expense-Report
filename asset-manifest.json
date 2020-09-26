@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Easy-Expense-Report/static/css/main.26a01813.chunk.css",
+    "main.js": "/Easy-Expense-Report/static/js/main.0f1e7e81.chunk.js",
+    "main.js.map": "/Easy-Expense-Report/static/js/main.0f1e7e81.chunk.js.map",
+    "runtime-main.js": "/Easy-Expense-Report/static/js/runtime-main.7934d80b.js",
+    "runtime-main.js.map": "/Easy-Expense-Report/static/js/runtime-main.7934d80b.js.map",
+    "static/js/2.e084a474.chunk.js": "/Easy-Expense-Report/static/js/2.e084a474.chunk.js",
+    "static/js/2.e084a474.chunk.js.map": "/Easy-Expense-Report/static/js/2.e084a474.chunk.js.map",
+    "index.html": "/Easy-Expense-Report/index.html",
+    "precache-manifest.89888eac8a6f4f6b01dca7f4e5ff4878.js": "/Easy-Expense-Report/precache-manifest.89888eac8a6f4f6b01dca7f4e5ff4878.js",
+    "service-worker.js": "/Easy-Expense-Report/service-worker.js",
+    "static/css/main.26a01813.chunk.css.map": "/Easy-Expense-Report/static/css/main.26a01813.chunk.css.map",
+    "static/js/2.e084a474.chunk.js.LICENSE.txt": "/Easy-Expense-Report/static/js/2.e084a474.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7934d80b.js",
+    "static/js/2.e084a474.chunk.js",
+    "static/css/main.26a01813.chunk.css",
+    "static/js/main.0f1e7e81.chunk.js"
+  ]
+}
