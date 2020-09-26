@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Header } from './Components/header';
-import { Account } from './Components/account';
+import { AllReports } from './Components/all';
 import { DATA } from './initial_data';
 import './styles.css';
 
 const App = () => {
 
   const [data, setData] = useState(DATA);
+  const [ showAll, setShowAll ] = useState(true);
 
   const addAccount = (title) => {
     if(title.trim() !== "") {
@@ -19,7 +20,7 @@ const App = () => {
   const removeAccount = (idx) => {
     let newData = data.slice(0,idx).concat(data.slice(idx+1))
     setData(newData);
-  } 
+  }; 
 
   const updateAccount = (currIdx, itemsArr) => {
     let newAccData = data.map((datum, idx) => {
@@ -33,21 +34,28 @@ const App = () => {
     })
 
     setData(newAccData);
+  };
+
+  const toggle = (field) => {
+
+    switch (field) {
+      case ('showAll'):
+        setShowAll(!showAll);
+        break;
+    
+      default:
+        break;
+    }
   }
 
   return (
     <div className="App">
-      <Header addAccount={addAccount}/>
-      <ul>
-        {data.map((acc, idx) => {
-          return <Account data={acc} 
-                          idx={idx} 
-                          key={idx} 
-                          updateAccount={updateAccount} 
-                          removeAccount={removeAccount}
-                          />
-        })}
-      </ul>
+      <Header addAccount={addAccount} toggle={toggle}/>
+      <AllReports 
+          updateAccount={updateAccount} 
+          removeAccount={removeAccount} 
+          data={data} 
+          showAll={showAll}/>
     </div>
   );
 }

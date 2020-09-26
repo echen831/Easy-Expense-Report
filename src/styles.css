@@ -7,8 +7,17 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
+
 .App {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.hide {
+    display: none;
 }
 
 
@@ -22,6 +31,19 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.add-form-container {
+    position: absolute;
+    width: 20em;
+    margin-right: 1em;
+    right: 0;
+}
+
+.add-form-container form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .account-container {
@@ -39,6 +61,7 @@ ul {
 .item-container {
     display: flex;
     width: 80%;
+    border: 1px solid black;
 }
 
 .item-container div {
@@ -50,12 +73,15 @@ ul {
     align-items: center;
 }
 
+.item-container form {
+    padding: 5px;
+}
+
 .item-container input {
     background-color: rgba(255, 255, 255, 0);
     height: 100%;
     outline: none;
     border: none;
-    margin: 1em;
     padding: 0;
 }
 
