@@ -6,12 +6,14 @@ export const Header = (props) => {
 
     const handleChange = (e) => {
         setTitle(e.currentTarget.value);
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.add(title);
-    }
+        props.addAccount(title);
+        setTitle("");
+    };
+
     return (
         <div className='header-container'>
             <h1>My Expense Report</h1>

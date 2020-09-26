@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export const Item = (props) => {
-    const [date, setDate] = useState(props.date);
-    const [desc, setDesc] = useState(props.desc);
-    const [cat, setCat] = useState(props.cat);
-    const [ammt, setAmmt] = useState(props.ammt);
+    const [date, setDate] = useState(props.date ? props.date : "");
+    const [desc, setDesc] = useState(props.desc ? props.desc : "");
+    const [cat, setCat] = useState(props.cat ? props.cat : "");
+    const [ammt, setAmmt] = useState(props.ammt ? props.ammt : "");
 
     const dateRef = useRef();
     const descRef = useRef();
@@ -60,10 +60,11 @@ export const Item = (props) => {
                 <input type="date" ref={dateRef} value={date} onChange={handleDateChange} />
                 <input type="text" ref={descRef} value={desc} onChange={handleDescChange} />
                 <input type="text" ref={catRef} value={cat} onChange={handleCatChange}/>
-                <input type="text" ref={ammtRef} value={ammt} onChange={handleAmmtChange}/>
+                <input type="text" ref={ammtRef} value={ammt !== "0" ? ammt : ""} onChange={handleAmmtChange}/>
                 {/* <input type="submit" style={{display: "none"}}/> */}
                 <button type="submit">Update</button>
             </form>
+            <button onClick={() => props.remove(props.idx)}>Remove</button>
         </div>
     )
 };

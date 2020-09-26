@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { Item } from './item';
-
-const DATA = [
-    { date: '2019-10-01', desc: 'Dog chewing toy', cat: 'Pets', ammt: 100.00 },
-    { date: '2020-08-31', desc: 'Cake for birthday', cat: 'Food', ammt: 50.00 },
-    { date: '2020-09-20', desc: 'Costco Run', cat: 'Groceries', ammt: 200.00 }
-]
+import { AddItem } from './add_item';
 
 export const Report = (props) => {
 
@@ -25,10 +20,18 @@ export const Report = (props) => {
             return item;
         })
         setData(newData);
+        props.updateAccount(props.idx, newData);
     };
 
-    const add = () => {
+    const add = (dataObj) => {
+        let newData = [...data, dataObj]
+        setData(newData);
+        props.updateAccount(props.idx, newData);
+    }
 
+    const remove = (idx) => {
+        let newData = data.slice(0,idx).concat(data.slice(idx+1));
+        setData(newData);
     }
 
     const check = () => {
@@ -44,10 +47,12 @@ export const Report = (props) => {
                           cat={item.cat}
                           ammt={item.ammt}
                           update={update}
+                          remove={remove}
                           idx={idx}
                           key={idx}
                     />
                 ))}
+                <AddItem add={add}/>
             </ul>
                 <p>{`Total Expense: ${data.reduce((a,c) => (a + parseFloat(c.ammt)),0)}`}</p>
             <button onClick={check}>Check</button>
