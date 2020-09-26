@@ -39,7 +39,7 @@ export const Report = (props) => {
     }
     
     return (
-        <div className="report-container">
+        <div className={ props.show ? "report-container" : "hide"}>
             <ul>
                 {data.map((item, idx) => (
                     <Item date={item.date}
