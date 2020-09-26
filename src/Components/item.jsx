@@ -1,8 +1,23 @@
-import React, { useImperativeHandle, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const Item = (props) => {
-    const [date, setDate] = useState(props.date)
-    const [desc, setDesc] = useState(props.desc)
+    const [date, setDate] = useState(props.date);
+    const [desc, setDesc] = useState(props.desc);
+    const [cat, setCat] = useState(props.cat);
+    const [ammt, setAmmt] = useState(props.ammt);
+
+    // useEffect(() => {
+    //     const listener = e => {
+    //         if(e.code === 'Enter') {
+    //             handleSubmit(e);
+    //         }
+    //     }
+
+    //     document.addEventListener("keydown", listener);
+    //     return () => {
+    //         document.removeEventListener("keydown", listener)
+    //     }
+    // }, [])
 
     const handleDescChange = (e) => {
         setDesc(e.currentTarget.value);
@@ -12,20 +27,20 @@ export const Item = (props) => {
         setDate(e.currentTarget.value);
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.update(props.idx, date, desc, cat, ammt);
+    }
+
     return (
         <div className='item-container'>
-            <div>
-                <form action="">
-                    <input type="date" placeholder={date} onChange={handleDateChange}/>
-                </form>
-            </div>
-            <div>
-                <form action="">
-                    <input type="text" value={desc} onChange={handleDescChange}/>
-                </form>
-            </div>
-            <div>{props.cat}</div>
-            <div>{props.ammt}</div>
+
+            <form action="">
+                <input type="date" value={date} onChange={handleDateChange} />
+                <input type="text" value={desc} onChange={handleDescChange} />
+                <input type="text" value={cat}/>
+                <input type="text" value={ammt}/>
+            </form>
         </div>
     )
 };
