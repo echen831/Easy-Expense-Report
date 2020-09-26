@@ -36,6 +36,14 @@ export const Item = (props) => {
         setDate(e.currentTarget.value);
     }
 
+    const handleAmmtChange = (e) => {
+        setAmmt(e.currentTarget.value);
+    }
+
+    const handleCatChange = (e) => {
+        setCat(e.currentTarget.value)
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         props.update(props.idx, date, desc, cat, ammt);
@@ -48,12 +56,13 @@ export const Item = (props) => {
     return (
         <div className='item-container'>
 
-            <form action="" onSubmit={(e) => handleSubmit(e)}>
+            <form action="" onSubmit={handleSubmit}>
                 <input type="date" ref={dateRef} value={date} onChange={handleDateChange} />
                 <input type="text" ref={descRef} value={desc} onChange={handleDescChange} />
-                <input type="text" ref={catRef} value={cat}/>
-                <input type="text" ref={ammtRef} value={ammt}/>
-                <input type="submit" style={{display: "none"}}/>
+                <input type="text" ref={catRef} value={cat} onChange={handleCatChange}/>
+                <input type="text" ref={ammtRef} value={ammt} onChange={handleAmmtChange}/>
+                {/* <input type="submit" style={{display: "none"}}/> */}
+                <button type="submit">Update</button>
             </form>
         </div>
     )

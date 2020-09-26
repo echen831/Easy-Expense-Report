@@ -45,6 +45,7 @@ export const Report = () => {
                     />
                 ))}
             </ul>
+                <p>{`Total Expense: ${data.reduce((a,c) => (a + parseFloat(c.ammt)),0)}`}</p>
             <button onClick={check}>Check</button>
         </div>
     )
