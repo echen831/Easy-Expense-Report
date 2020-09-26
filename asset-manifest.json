@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Easy-Expense-Report/static/css/main.26a01813.chunk.css",
-    "main.js": "/Easy-Expense-Report/static/js/main.d9ea57ad.chunk.js",
-    "main.js.map": "/Easy-Expense-Report/static/js/main.d9ea57ad.chunk.js.map",
-    "runtime-main.js": "/Easy-Expense-Report/static/js/runtime-main.7934d80b.js",
-    "runtime-main.js.map": "/Easy-Expense-Report/static/js/runtime-main.7934d80b.js.map",
-    "static/js/2.941b7d64.chunk.js": "/Easy-Expense-Report/static/js/2.941b7d64.chunk.js",
-    "static/js/2.941b7d64.chunk.js.map": "/Easy-Expense-Report/static/js/2.941b7d64.chunk.js.map",
-    "index.html": "/Easy-Expense-Report/index.html",
-    "precache-manifest.e764cc03de832372f1ada567a3076a27.js": "/Easy-Expense-Report/precache-manifest.e764cc03de832372f1ada567a3076a27.js",
-    "service-worker.js": "/Easy-Expense-Report/service-worker.js",
-    "static/css/main.26a01813.chunk.css.map": "/Easy-Expense-Report/static/css/main.26a01813.chunk.css.map",
-    "static/js/2.941b7d64.chunk.js.LICENSE.txt": "/Easy-Expense-Report/static/js/2.941b7d64.chunk.js.LICENSE.txt"
+    "main.css": "/EasyExpenseReport/static/css/main.26a01813.chunk.css",
+    "main.js": "/EasyExpenseReport/static/js/main.d9ea57ad.chunk.js",
+    "main.js.map": "/EasyExpenseReport/static/js/main.d9ea57ad.chunk.js.map",
+    "runtime-main.js": "/EasyExpenseReport/static/js/runtime-main.bc8ea80f.js",
+    "runtime-main.js.map": "/EasyExpenseReport/static/js/runtime-main.bc8ea80f.js.map",
+    "static/js/2.941b7d64.chunk.js": "/EasyExpenseReport/static/js/2.941b7d64.chunk.js",
+    "static/js/2.941b7d64.chunk.js.map": "/EasyExpenseReport/static/js/2.941b7d64.chunk.js.map",
+    "index.html": "/EasyExpenseReport/index.html",
+    "precache-manifest.5a37100392885344350b5c30db3f61df.js": "/EasyExpenseReport/precache-manifest.5a37100392885344350b5c30db3f61df.js",
+    "service-worker.js": "/EasyExpenseReport/service-worker.js",
+    "static/css/main.26a01813.chunk.css.map": "/EasyExpenseReport/static/css/main.26a01813.chunk.css.map",
+    "static/js/2.941b7d64.chunk.js.LICENSE.txt": "/EasyExpenseReport/static/js/2.941b7d64.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7934d80b.js",
+    "static/js/runtime-main.bc8ea80f.js",
     "static/js/2.941b7d64.chunk.js",
     "static/css/main.26a01813.chunk.css",
     "static/js/main.d9ea57ad.chunk.js"
