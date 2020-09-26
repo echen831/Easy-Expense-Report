@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Item } from './item';
 import { AddItem } from './add_item';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Report = (props) => {
 
@@ -24,9 +25,12 @@ export const Report = (props) => {
     };
 
     const add = (dataObj) => {
-        let newData = [...data, dataObj]
-        setData(newData);
-        props.updateAccount(props.idx, newData);
+
+        if (dataObj.desc.trim() !== "" && dataObj.ammt !== "0") {
+            let newData = [...data, dataObj]
+            setData(newData);
+            props.updateAccount(props.idx, newData);
+        }
     }
 
     const remove = (idx) => {
@@ -36,6 +40,22 @@ export const Report = (props) => {
 
     const check = () => {
         console.log(data)
+    }
+
+    const sum = (data) => {
+        let s = data.reduce((a, c) => (a + parseFloat(c.ammt)), 0);
+        return s.toFixed(2);
+
+        // if(s % 1 === 0) {
+        //     return s.toString().concat(".00");
+        // }
+
+        // let arr = s.toString().split(".");
+        // if (arr[1].length === 1) {
+        //     return s.toString().concat("0") 
+        // } else {
+        //     return s.toString();
+        // }
     }
     
     return (
@@ -54,8 +74,8 @@ export const Report = (props) => {
                 ))}
                 <AddItem add={add}/>
             </ul>
-                <p>{`Total Expense: ${data.reduce((a,c) => (a + parseFloat(c.ammt)),0)}`}</p>
-            <button onClick={check}>Check</button>
+                <p>{`Total Expenses: $${sum(data)}`}</p>
+            {/* <button onClick={check}>Check</button> */}
         </div>
     )
 };

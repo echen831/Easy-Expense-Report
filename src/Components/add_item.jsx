@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const AddItem = (props) => {
 
@@ -15,6 +16,7 @@ export const AddItem = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         props.add(data)
+        setData({ date: "", desc: "", cat: "", ammt: "0" });
     };
 
     return (
@@ -24,7 +26,7 @@ export const AddItem = (props) => {
                 <input type="text" value={data.desc} onChange={(e) => update(e, 'desc')}/>
                 <input type="text" value={data.cat} onChange={(e) => update(e, 'cat')}/>
                 <input type="text" value={data.ammt !== "0" ? data.ammt : "" } onChange={(e) => update(e, 'ammt')}/>
-                <button type="submit">Add</button>
+                <button type="submit"><FontAwesomeIcon icon="user-plus" /></button>
             </form>
         </div>
     )

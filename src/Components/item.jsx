@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Item = (props) => {
     const [date, setDate] = useState(props.date ? props.date : "");
@@ -62,9 +63,9 @@ export const Item = (props) => {
                 <input type="text" ref={catRef} value={cat} onChange={handleCatChange}/>
                 <input type="text" ref={ammtRef} value={ammt !== "0" ? ammt : ""} onChange={handleAmmtChange}/>
                 {/* <input type="submit" style={{display: "none"}}/> */}
-                <button type="submit">Update</button>
+                <button type="submit"><FontAwesomeIcon icon="user-edit" /></button>
             </form>
-            <button onClick={() => props.remove(props.idx)}>Remove</button>
+            <p onClick={() => props.remove(props.idx)}><FontAwesomeIcon icon="trash" /></p>
         </div>
     )
 };
