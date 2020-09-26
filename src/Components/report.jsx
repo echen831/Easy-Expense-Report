@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Item } from './item';
 
 const DATA = [
-    {date: '2019-10-01', desc: 'Dog chewing toy', cat: 'Pets', ammt: 100.00 },
+    { date: '2019-10-01', desc: 'Dog chewing toy', cat: 'Pets', ammt: 100.00 },
     { date: '2020-08-31', desc: 'Cake for birthday', cat: 'Food', ammt: 50.00 },
     { date: '2020-09-20', desc: 'Costco Run', cat: 'Groceries', ammt: 200.00 }
 ]
 
-export const Report = () => {
+export const Report = (props) => {
 
-    const [data, setData] = useState(DATA)
+    const [data, setData] = useState(props.data)
 
     const update = (currentIdx, date, desc, cat, ammt) => {
         let newData = data.map((item, idx) => {
@@ -26,6 +26,10 @@ export const Report = () => {
         })
         setData(newData);
     };
+
+    const add = () => {
+
+    }
 
     const check = () => {
         console.log(data)
