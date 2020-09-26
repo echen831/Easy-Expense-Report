@@ -26,6 +26,10 @@ export const Report = () => {
         })
         setData(newData);
     };
+
+    const check = () => {
+        console.log(data)
+    }
     
     return (
         <div className="report-container">
@@ -41,6 +45,7 @@ export const Report = () => {
                     />
                 ))}
             </ul>
+            <button onClick={check}>Check</button>
         </div>
     )
 };
