@@ -86,7 +86,9 @@ const App = () => {
   return (
     <div className="App">
       <AccountShow account={data[0]}
-                   updateTransaction={updateTransaction}/>
+                   updateTransaction={updateTransaction}
+                   idx={0}
+                   />
       {/* <Header addAccount={addAccount} toggle={toggle}/>
       <AllReports 
           updateAccount={updateAccount} 

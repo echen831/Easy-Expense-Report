@@ -10,10 +10,11 @@ export const TextForm = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        props.update("desc", text)
     };
 
     return (
-        <form action="">
+        <form action="" onSubmit={handleSubmit}>
             <input type="text" value={text} onChange={handleChange}/>
         </form>
     )
