@@ -70,6 +70,10 @@ const App = () => {
     }
   };
 
+  const updateTransaction = (accountIdx, transaction) => {
+    
+  };
+
   return (
     <div className="App">
       <AccountShow account={data[0]}/>
