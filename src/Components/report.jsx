@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Item } from './item';
 import { AddItem } from './add_item';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Report = (props) => {
 
-    const [data, setData] = useState(props.data)
+    const [data, setData] = useState(props.data);
+
+    useEffect(() => {
+        setData(props.data.sort((a,b) => a.date - b.date))
+    });
 
     const update = (currentIdx, date, desc, cat, ammt) => {
         let newData = data.map((item, idx) => {
@@ -20,9 +24,11 @@ export const Report = (props) => {
 
             return item;
         })
+        // newData = newData.sort((a,b) => a.date - b.date)
         setData(newData);
         props.updateAccount(props.idx, newData);
     };
+
 
     const add = (dataObj) => {
 
@@ -61,7 +67,7 @@ export const Report = (props) => {
     return (
         <div className={ props.show ? "report-container" : "hide"}>
             <ul>
-                {data.sort((a,b) => a.date - b.date).map((item, idx) => (
+                {data.map((item, idx) => (
                     <Item date={item.date}
                           desc={item.desc}
                           cat={item.cat}

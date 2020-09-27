@@ -35,7 +35,7 @@ export const Item = (props) => {
 
     const handleDateChange = (e) => {
         let arr = e.currentTarget.value.split("-")
-        setDate(new Date(arr[0], arr[1], arr[2]));
+        setDate(new Date(Number(arr[0]), Number(arr[1])-1, Number(arr[2])));
     }
 
     const handleAmmtChange = (e) => {
@@ -56,7 +56,7 @@ export const Item = (props) => {
     }
 
     const showDate = () => {
-        let month = date.getMonth();
+        let month = date.getMonth() + 1;
         let day = date.getDate();
         if (month < 10) {
             month = "0" + month;
@@ -81,7 +81,7 @@ export const Item = (props) => {
                 <button type="submit"><FontAwesomeIcon icon="user-edit" /></button>
             </form>
             <p onClick={() => props.remove(props.idx)}><FontAwesomeIcon icon="trash" /></p>
-            <button onClick={()=> console.log(showDate())}>Show Date</button>
+            {/* <button onClick={()=> console.log(showDate())}>Show Date</button> */}
         </div>
     )
 };

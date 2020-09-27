@@ -15,7 +15,7 @@ export const AddItem = (props) => {
 
     const handleDateChange = (e) => {
         let arr = e.currentTarget.value.split("-")
-        setData({date: new Date(Number(arr[0]), Number(arr[1]), Number(arr[2]))});
+        setData({...data, date: new Date(Number(arr[0]), Number(arr[1])-1, Number(arr[2]))});
     }
 
     const handleSubmit = (e) => {
@@ -25,7 +25,7 @@ export const AddItem = (props) => {
     };
 
     const showDate = () => {
-        let month = data.date.getMonth();
+        let month = data.date.getMonth()+1;
         let day = data.date.getDate();
         if (month < 10) {
             month = "0" + month;
@@ -40,12 +40,12 @@ export const AddItem = (props) => {
 
     return (
         <div className="item-container">
-            <form  onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input type="date" required value={data.date === "" ? "" : showDate()} onChange={handleDateChange}/>
                 <input type="text" required value={data.desc} onChange={(e) => update(e, 'desc')}/>
                 <input type="text" required value={data.cat} onChange={(e) => update(e, 'cat')}/>
                 <input type="text" required value={data.ammt !== "0" ? data.ammt : "" } onChange={(e) => update(e, 'ammt')}/>
-                <button type="submit"><FontAwesomeIcon icon="user-plus" /></button>
+                <button type="submit"><FontAwesomeIcon icon="user-plus"/></button>
             </form>
         </div>
     )
