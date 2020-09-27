@@ -70,13 +70,23 @@ const App = () => {
     }
   };
 
-  const updateTransaction = (accountIdx, transaction) => {
-    
+  const updateTransaction = (accountIdx, transactions) => {
+    let newData = data.map((acc, idx) => {
+      if (accountIdx === idx) {
+        return {
+          ...acc,
+          transactions
+        };
+      }
+      return acc;
+    })
+    setData(newData)
   };
 
   return (
     <div className="App">
-      <AccountShow account={data[0]}/>
+      <AccountShow account={data[0]}
+                   updateTransaction={updateTransaction}/>
       {/* <Header addAccount={addAccount} toggle={toggle}/>
       <AllReports 
           updateAccount={updateAccount} 

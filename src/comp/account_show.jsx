@@ -22,7 +22,9 @@ export const AccountShow = (props) => {
             <h1>{props.account.title}</h1>
             <ul> Transactions: 
                 {props.account.transactions.map((trans, idx) => (
-                    <TransactionShow key={idx} trans={trans}/>
+                    <TransactionShow key={idx} 
+                                     trans={trans} 
+                                     updateTransaction={props.updateTransaction}/>
                 ))}
             </ul>
             <p>Balance: ${findBalance()}</p>
