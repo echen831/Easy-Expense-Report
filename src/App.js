@@ -77,7 +77,7 @@ const App = () => {
           removeAccount={removeAccount} 
           data={data} 
           showAll={show.all}/>
-      <WeekReport showWeek={show.week}/>
+      <WeekReport showWeek={show.week} data={data}/>
       <MonthReport showMonth={show.month}/>
       <DayReport showDay={show.day}/>
     </div>

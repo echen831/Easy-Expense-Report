@@ -11,6 +11,7 @@ export const AddReport = (props) => {
         e.preventDefault();
         props.addAccount(title);
         setTitle("");
+        props.toggle("all")
     };
 
     return (
