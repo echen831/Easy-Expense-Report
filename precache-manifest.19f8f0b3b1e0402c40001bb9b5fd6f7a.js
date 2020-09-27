@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc8448a4248265b7785e37c389a00d93",
+    "revision": "039b16240ba1e9eabc4618e35f6b01bd",
     "url": "/EasyExpenseReport/index.html"
   },
   {
-    "revision": "7901ef36fc3c00542adf",
+    "revision": "04944764a6872c78087c",
     "url": "/EasyExpenseReport/static/css/main.0fff955c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/EasyExpenseReport/static/js/2.941b7d64.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7901ef36fc3c00542adf",
-    "url": "/EasyExpenseReport/static/js/main.4b6c0b2d.chunk.js"
+    "revision": "04944764a6872c78087c",
+    "url": "/EasyExpenseReport/static/js/main.f0691bb0.chunk.js"
   },
   {
     "revision": "8f1a98effc32449a6ee8",
