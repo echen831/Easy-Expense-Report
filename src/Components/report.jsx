@@ -7,10 +7,6 @@ export const Report = (props) => {
 
     const [data, setData] = useState(props.data);
 
-    useEffect(() => {
-        setData(props.data.sort((a,b) => a.date - b.date))
-    });
-
     const update = (currentIdx, date, desc, cat, ammt) => {
         let newData = data.map((item, idx) => {
             if (currentIdx === idx) {
