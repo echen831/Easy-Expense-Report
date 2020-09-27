@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Account = (props) => {
 
-    const [show, setShow] = useState(false)
+    const [show, setShow] = useState(false);
+    
     return (
         <div className="account-container">
             <div className='account-header'>

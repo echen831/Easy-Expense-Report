@@ -24,7 +24,7 @@ export const Report = (props) => {
 
             return item;
         })
-        // newData = newData.sort((a,b) => a.date - b.date)
+        newData = newData.sort((a,b) => a.date - b.date)
         setData(newData);
         props.updateAccount(props.idx, newData);
     };
@@ -81,7 +81,7 @@ export const Report = (props) => {
                 <AddItem add={add}/>
             </ul>
                 <span>{`Total Expenses: $${sum(data)}`}</span>
-            <button onClick={check}>Check</button>
+            {/* <button onClick={check}>Check</button> */}
         </div>
     )
 };
