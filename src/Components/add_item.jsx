@@ -13,6 +13,11 @@ export const AddItem = (props) => {
         setData(newData)
     };
 
+    const handleDateChange = (e) => {
+        let arr = e.currentTarget.value.split("-")
+        setData({date: new Date(arr[0], arr[1], arr[2])});
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         props.add(data)
@@ -22,7 +27,7 @@ export const AddItem = (props) => {
     return (
         <div className="item-container">
             <form  onSubmit={handleSubmit}>
-                <input type="date" required value={data.date} onChange={(e) => update(e, 'date')}/>
+                <input type="date" required value={data.date} onChange={handleDateChange}/>
                 <input type="text" required value={data.desc} onChange={(e) => update(e, 'desc')}/>
                 <input type="text" required value={data.cat} onChange={(e) => update(e, 'cat')}/>
                 <input type="text" required value={data.ammt !== "0" ? data.ammt : "" } onChange={(e) => update(e, 'ammt')}/>

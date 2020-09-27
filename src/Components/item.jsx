@@ -34,7 +34,8 @@ export const Item = (props) => {
     }
 
     const handleDateChange = (e) => {
-        setDate(e.currentTarget.value);
+        let arr = e.currentTarget.value.split("-")
+        setDate(new Date(arr[0], arr[1], arr[2]));
     }
 
     const handleAmmtChange = (e) => {
@@ -54,11 +55,25 @@ export const Item = (props) => {
         ammtRef.current.blur();
     }
 
+    const showDate = () => {
+        let month = date.getMonth();
+        let day = date.getDate();
+        if (month < 10) {
+            month = "0" + month;
+        }
+
+        if (day < 10) {
+            day = "0" + day;
+        }
+
+        return `${date.getFullYear()}-${month}-${day}`;
+    }
+
     return (
         <div className='item-container'>
 
             <form action="" onSubmit={handleSubmit}>
-                <input type="date" ref={dateRef} value={date} onChange={handleDateChange} />
+                <input type="date" ref={dateRef} value={showDate()} onChange={handleDateChange} />
                 <input type="text" ref={descRef} value={desc} onChange={handleDescChange} />
                 <input type="text" ref={catRef} value={cat} onChange={handleCatChange}/>
                 <input type="text" ref={ammtRef} value={ammt !== "0" ? ammt : ""} onChange={handleAmmtChange}/>
@@ -66,6 +81,7 @@ export const Item = (props) => {
                 <button type="submit"><FontAwesomeIcon icon="user-edit" /></button>
             </form>
             <p onClick={() => props.remove(props.idx)}><FontAwesomeIcon icon="trash" /></p>
+            <button onClick={()=> console.log(showDate())}>Show Date</button>
         </div>
     )
 };
