@@ -7,7 +7,7 @@ export const AllReports = ({data, updateAccount, removeAccount, showAll}) => {
         <div className={!showAll ? "hide" : ""}>
 
             <ul>
-                {data.sort((a,b) => a.date < b.date).map((acc, idx) => {
+                {data.map((acc, idx) => {
                     return <Account data={acc}
                         idx={idx}
                         key={idx}

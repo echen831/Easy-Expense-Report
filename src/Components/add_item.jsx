@@ -22,10 +22,10 @@ export const AddItem = (props) => {
     return (
         <div className="item-container">
             <form  onSubmit={handleSubmit}>
-                <input type="date" value={data.date} onChange={(e) => update(e, 'date')}/>
-                <input type="text" value={data.desc} onChange={(e) => update(e, 'desc')}/>
-                <input type="text" value={data.cat} onChange={(e) => update(e, 'cat')}/>
-                <input type="text" value={data.ammt !== "0" ? data.ammt : "" } onChange={(e) => update(e, 'ammt')}/>
+                <input type="date" required value={data.date} onChange={(e) => update(e, 'date')}/>
+                <input type="text" required value={data.desc} onChange={(e) => update(e, 'desc')}/>
+                <input type="text" required value={data.cat} onChange={(e) => update(e, 'cat')}/>
+                <input type="text" required value={data.ammt !== "0" ? data.ammt : "" } onChange={(e) => update(e, 'ammt')}/>
                 <button type="submit"><FontAwesomeIcon icon="user-plus" /></button>
             </form>
         </div>
