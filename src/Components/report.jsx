@@ -61,7 +61,7 @@ export const Report = (props) => {
     return (
         <div className={ props.show ? "report-container" : "hide"}>
             <ul>
-                {data.sort((a,b) => a.date > b.date).map((item, idx) => (
+                {data.sort((a,b) => a.date - b.date).map((item, idx) => (
                     <Item date={item.date}
                           desc={item.desc}
                           cat={item.cat}
