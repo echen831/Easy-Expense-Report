@@ -15,3 +15,41 @@ export const DATA = [
         ]
     }
 ]
+
+export const ACCOUNTS = [
+    {
+        title: "My First Account",
+        balance: 0,
+        transactions: [
+            {
+                type: "deposit",
+                amount: 500.00,
+                desc: "Paycheck",
+                cat: "Deposit",
+                date: new Date(2020, 9, 1)
+            },
+            {
+                type: "expense",
+                amount: 128.00,
+                desc: "Dinner",
+                cat: "Food",
+                date: new Date(2020, 9, 17)
+            },
+            {
+                type: "expense",
+                amount: 40.00,
+                desc: "Baseball Game",
+                cat: "Entertainment",
+                date: new Date(2020, 9, 23)
+            },
+            {
+                type: "expense",
+                amount: 39.28,
+                desc: "Gas",
+                cat: "Transportation",
+                date: new Date(2020, 9, 23)
+            }
+
+        ]
+    }
+]

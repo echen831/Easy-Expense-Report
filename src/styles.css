@@ -116,3 +116,20 @@ button {
 .item-container input:focus {
     background-color: rgb(211, 211, 211);
 }
+
+
+/* After Change */
+
+.ts-container {
+    display: flex;
+}
+
+.ts-container p {
+    width: 15em;
+    margin: 2px;
+    padding: 3px;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey ;
+}
+
+/****************/

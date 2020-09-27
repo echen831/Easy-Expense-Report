@@ -76,7 +76,7 @@ export const Report = (props) => {
                 <AddItem add={add}/>
             </ul>
                 <span>{`Total Expenses: $${sum(data)}`}</span>
-            {/* <button onClick={check}>Check</button> */}
+            <button onClick={check}>Check</button>
         </div>
     )
 };

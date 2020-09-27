@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export const Account = (props) => {
 
     const [show, setShow] = useState(false);
-    
+
     return (
         <div className="account-container">
             <div className='account-header'>
@@ -20,7 +20,7 @@ export const Account = (props) => {
                     updateAccount={props.updateAccount}
                     show={show}
                     />
-            {/* <button onClick={() => console.log(props.data)}>Check Account Info</button> */}
+            <button onClick={() => console.log(props.data)}>Check Account Info</button>
         </div>
     )
 }

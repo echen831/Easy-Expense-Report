@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Header } from './Components/header';
-import { AllReports } from './Components/reports/all';
-import { WeekReport } from './Components/reports/week';
-import { DayReport } from './Components/reports/day';
-import { MonthReport } from './Components/reports/month';
-import { DATA } from './initial_data';
+import {AccountShow} from './comp/account_show';
+// import { Header } from './Components/header';
+// import { AllReports } from './Components/reports/all';
+// import { WeekReport } from './Components/reports/week';
+// import { DayReport } from './Components/reports/day';
+// import { MonthReport } from './Components/reports/month';
+import { DATA, ACCOUNTS } from './initial_data';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +16,7 @@ library.add(fab, fas);
 
 const App = () => {
 
-  const [data, setData] = useState(DATA);
+  const [data, setData] = useState(ACCOUNTS);
   const [ show, setShow ] = useState({all: true, month: false, week: false, day: false})
 
   const addAccount = (title) => {
@@ -71,7 +72,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header addAccount={addAccount} toggle={toggle}/>
+      <AccountShow account={data[0]}/>
+      {/* <Header addAccount={addAccount} toggle={toggle}/>
       <AllReports 
           updateAccount={updateAccount} 
           removeAccount={removeAccount} 
@@ -79,7 +81,7 @@ const App = () => {
           showAll={show.all}/>
       <WeekReport showWeek={show.week} data={data}/>
       <MonthReport showMonth={show.month}/>
-      <DayReport showDay={show.day}/>
+      <DayReport showDay={show.day}/> */}
     </div>
   );
 }
