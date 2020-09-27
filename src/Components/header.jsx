@@ -8,11 +8,11 @@ export const Header = (props) => {
         <div className='header-container'>
             <h1>Easy Expense Report</h1>
             <AddReport addAccount={props.addAccount}/>
-            <div>
-                <button onClick={() => props.toggle('all')}>All</button>
-                <button onClick={() => props.toggle('day')}>Day</button>
-                <button onClick={() => props.toggle('week')}>Week</button>
-                <button onClick={() => props.toggle('month')}>Month</button>
+            <div className='report-control'>
+                <p onClick={() => props.toggle('all')}>All</p>
+                <p onClick={() => props.toggle('day')}>Day</p>
+                <p onClick={() => props.toggle('week')}>Week</p>
+                <p onClick={() => props.toggle('month')}>Month</p>
             </div>
         </div>
     )

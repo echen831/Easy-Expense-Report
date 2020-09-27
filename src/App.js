@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Header } from './Components/header';
-import { AllReports } from './Components/all';
-import { WeekReport } from './Components/week';
-import { DayReport } from './Components/day';
-import { MonthReport } from './Components/month';
+import { AllReports } from './Components/reports/all';
+import { WeekReport } from './Components/reports/week';
+import { DayReport } from './Components/reports/day';
+import { MonthReport } from './Components/reports/month';
 import { DATA } from './initial_data';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';

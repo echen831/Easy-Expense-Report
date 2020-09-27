@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Item = (props) => {
-    const [date, setDate] = useState(props.date ? props.date : "");
-    const [desc, setDesc] = useState(props.desc ? props.desc : "");
-    const [cat, setCat] = useState(props.cat ? props.cat : "");
-    const [ammt, setAmmt] = useState(props.ammt ? props.ammt : "");
+    const [date, setDate] = useState(props.date);
+    const [desc, setDesc] = useState(props.desc);
+    const [cat, setCat] = useState(props.cat);
+    const [ammt, setAmmt] = useState(props.ammt);
 
     const dateRef = useRef();
     const descRef = useRef();

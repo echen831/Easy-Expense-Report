@@ -1,5 +1,5 @@
 import React from 'react';
-import { Account } from './account';
+import { Account } from '../account';
 
 export const AllReports = ({data, updateAccount, removeAccount, showAll}) => {
 
@@ -7,7 +7,7 @@ export const AllReports = ({data, updateAccount, removeAccount, showAll}) => {
         <div className={!showAll ? "hide" : ""}>
 
             <ul>
-                {data.map((acc, idx) => {
+                {data.sort((a,b) => a.date < b.date).map((acc, idx) => {
                     return <Account data={acc}
                         idx={idx}
                         key={idx}

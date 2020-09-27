@@ -30,6 +30,27 @@ button {
   align-items: center;
 }
 
+.report-control {
+    position: absolute;
+    left: 0;
+    margin-left: 1em;
+    width: 20em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.report-control p {
+    padding: 0.5em;
+    border: 1px solid lightgray;
+    border-radius: .25em;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+.report-control p:hover {
+    background-color: rgba(145, 238, 145, 0.5);
+}
+
 .add-form-container {
     position: absolute;
     width: 20em;
